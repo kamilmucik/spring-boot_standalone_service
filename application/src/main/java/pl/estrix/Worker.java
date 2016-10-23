@@ -3,14 +3,13 @@ package pl.estrix;
 import java.util.Date;
 
 import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-@Service
+@Component
 public class Worker {
 
-    @Scheduled(fixedRate=5000)
-    public void executeTask() {
-        //Do your work here.
-        System.out.println("Date/Time now: " + new Date());
+    @Scheduled(cron="0 * * * * *")
+    public void runTask() {
+        System.out.println("Runing at " + new Date());
     }
 }
