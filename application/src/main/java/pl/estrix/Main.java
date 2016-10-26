@@ -5,14 +5,10 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
-@SpringBootApplication(scanBasePackages = "pl.estrix")
-@EnableScheduling
-@EnableAutoConfiguration
-//@Configuration
+@SpringBootApplication
 public class Main {
 
     public static void main(String[] args) {
-
-        SpringApplication.run(Main.class);
+        SpringApplication.run(Main.class, args);
     }
 }

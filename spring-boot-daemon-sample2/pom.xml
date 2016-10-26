@@ -1,17 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
 	<parent>
-		<groupId>pl.estrix</groupId>
-		<artifactId>spring-standalone-service</artifactId>
-		<version>1.0-SNAPSHOT</version>
+		<groupId>net.nicoll</groupId>
+		<artifactId>spring-boot-daemon</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
 	</parent>
+	<artifactId>spring-boot-daemon-sample2</artifactId>
+	<packaging>jar</packaging>
+	<name>Spring Boot Daemon :: Sample</name>
 
-	<artifactId>application</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<properties>
+		<dist.dir>${project.build.directory}/dist</dist.dir>
+		<dist.project.id>${project.artifactId}</dist.project.id>
+		<dist.project.name>GFT Service</dist.project.name>
+		<dist.project.description>
+			Demonstrate how to integrate a Spring Boot app as a Windows Service
+		</dist.project.description>
+		<dist.start.class>net.nicoll.SampleApplication</dist.start.class>
+		<dist.jmx.port>50203</dist.jmx.port>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>net.nicoll</groupId>
+			<artifactId>spring-boot-daemon-integration</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.winsw</groupId>
+			<artifactId>winsw</artifactId>
+			<classifier>bin</classifier>
+			<type>exe</type>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
 
 
 	<build>
@@ -89,26 +122,5 @@
 		</plugins>
 	</build>
 
-	<dependencies>
-		<dependency>
-			<groupId>pl.estrix</groupId>
-			<artifactId>daemon-integration</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.sun.winsw</groupId>
-			<artifactId>winsw</artifactId>
-			<classifier>bin</classifier>
-			<type>exe</type>
-			<scope>provided</scope>
-		</dependency>
-	</dependencies>
 
 </project>

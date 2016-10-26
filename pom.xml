@@ -1,56 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>pl.estrix</groupId>
-	<artifactId>spring-standalone-service</artifactId>
-	<version>1.0-SNAPSHOT</version>
-	<packaging>pom</packaging>
-	<url>http://e-strix.pl/</url>
-	<name>spring-standalone-service</name>
-	<description>A Java application that can run as a Windows service.</description>
-
-	<modules>
-		<module>daemon-integration</module>
-		<module>application</module>
-	</modules>
-
-
-	
-	<properties>
-		<java.version>1.8</java.version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<dist.dir>${project.build.directory}/dist</dist.dir>
-		<dist.project.id>${project.artifactId}</dist.project.id>
-		<dist.project.name>GFT Backend Service</dist.project.name>
-		<dist.project.description>
-			Backend Windows Service
-		</dist.project.description>
-		<dist.start.class>pl.estrix.Main</dist.start.class>
-		<dist.jmx.port>50201</dist.jmx.port>
-	</properties>
-
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.3.5.RELEASE</version>
+		<relativePath/>
 	</parent>
+	<groupId>net.nicoll</groupId>
+	<artifactId>spring-boot-daemon</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>Spring Boot Daemon</name>
+	<description>
+		Demonstrate how to use Apache Commons Daemon with Spring Boot
+	</description>
 
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.6</java.version>
+	</properties>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
-	</dependencies>
+	<modules>
+		<module>spring-boot-daemon-integration</module>
+		<module>spring-boot-daemon-sample2</module>
+	</modules>
 
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>pl.estrix</groupId>
-				<artifactId>daemon-integration</artifactId>
-				<version>1.0-SNAPSHOT</version>
+				<groupId>net.nicoll</groupId>
+				<artifactId>spring-boot-daemon-integration</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>commons-daemon</groupId>
@@ -67,5 +49,15 @@
 		</dependencies>
 	</dependencyManagement>
 
+	<repositories>
+		<repository>
+			<id>jenkins</id>
+			<name>Jenkins Repository</name>
+			<url>http://repo.jenkins-ci.org/releases</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 
 </project>

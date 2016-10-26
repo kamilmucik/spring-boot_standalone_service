@@ -1,0 +1,12 @@
+2016-10-26 16:57:16 - Starting java  -Dspring.application.admin.enabled=true -Dcom.sun.management.jmxremote.port=50201 -Dcom.sun.management.jmxremote.authenticate=false "-Dcom.sun.management.jmxremote.ssl=false " -cp lib/* pl.estrix.boot.daemon.StartSpringBootService pl.estrix.Main 
+2016-10-26 16:57:16 - Started 12864
+2016-10-26 16:58:48 - Starting java  -Dspring.application.admin.enabled=true -Dcom.sun.management.jmxremote.port=50201 -Dcom.sun.management.jmxremote.authenticate=false "-Dcom.sun.management.jmxremote.ssl=false " -cp lib/* pl.estrix.boot.daemon.StartSpringBootService pl.estrix.Main 
+2016-10-26 16:58:48 - Started 12184
+2016-10-26 17:00:38 - Starting java  -Dspring.application.admin.enabled=true -Dcom.sun.management.jmxremote.port=50202 -Dcom.sun.management.jmxremote.authenticate=false "-Dcom.sun.management.jmxremote.ssl=false " -cp lib/* pl.estrix.boot.daemon.StartSpringBootService pl.estrix.Main 
+2016-10-26 17:00:38 - Started 9372
+2016-10-26 17:07:19 - Starting java  -Dspring.application.admin.enabled=true -Dcom.sun.management.jmxremote.port=50202 -Dcom.sun.management.jmxremote.authenticate=false "-Dcom.sun.management.jmxremote.ssl=false " -cp lib/* pl.estrix.boot.daemon.StartSpringBootService pl.estrix.Main 
+2016-10-26 17:07:19 - Started 12348
+2016-10-26 17:11:02 - Starting java  -Dspring.application.admin.enabled=true -Dcom.sun.management.jmxremote.port=50202 -Dcom.sun.management.jmxremote.authenticate=false "-Dcom.sun.management.jmxremote.ssl=false " -cp lib/* net.nicoll.boot.daemon.StartSpringBootService pl.estrix.Main 
+2016-10-26 17:11:02 - Started 8732
+2016-10-26 17:14:11 - Starting java  -Dspring.application.admin.enabled=true -Dcom.sun.management.jmxremote.port=50202 -Dcom.sun.management.jmxremote.authenticate=false "-Dcom.sun.management.jmxremote.ssl=false " -cp lib/* net.nicoll.boot.daemon.StartSpringBootService pl.estrix.Main 
+2016-10-26 17:14:11 - Started 12640
